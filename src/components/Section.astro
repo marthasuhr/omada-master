@@ -1,0 +1,64 @@
+---
+const { header, imgPath, imgPath1, imgPath2, tekst, side, descri1, price1, descri2, price2, descri3, price3 } = Astro.props;
+---
+
+<section class={side}>
+  <h1>{header}</h1>
+  <div class="billeder">
+    <div>
+      <img src={imgPath} alt="img" />
+      <p>{descri1}</p>
+      <p>{price1}</p>
+    </div>
+    <div>
+      <img src={imgPath1} alt="img" />
+      <p>{descri2}</p>
+      <p>{price2}</p>
+    </div>
+    <div>
+      <img src={imgPath2} alt="img" />
+      <p>{descri3}</p>
+      <p>{price3}</p>
+    </div>
+  </div>
+  <p>{tekst}</p>
+</section>
+
+<style>
+  @media (min-width: 1050px) {
+    .left {
+      margin-right: 30%;
+    }
+    .right {
+      margin-left: 30%;
+    }
+    .billeder {
+      gap: 20px;
+    }
+  }
+  div p {
+    margin-bottom: 0;
+    font-size: var(--xxxs);
+    margin-right: 0%;
+  }
+  p {
+    margin-bottom: 4rem;
+    margin-right: 30%;
+    font-size: var(--xxs);
+  }
+  h1 {
+    font-size: var(--l);
+    font-weight: 700;
+  }
+  img {
+    max-width: 300px;
+    margin-top: 2rem;
+    height: 90%;
+    padding-bottom: 0.5rem;
+  }
+  .billeder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+</style>

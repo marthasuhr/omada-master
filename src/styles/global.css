@@ -1,0 +1,56 @@
+:root {
+  /* Farver */
+  --baggrund: #fffef2;
+  --topbar: #2676f3;
+  --maintekst: #282828;
+  --secondary: #f75443;
+  --footer: #ede9df;
+
+  /* Typografi */
+  --xxxs: 15px;
+  --xxs: 20px;
+  --xs: 25px;
+  --s: 30px;
+  --m: 35px;
+  --l: 40px;
+  --xl: 50px;
+  --xxl: 60px;
+  --xxxl: 70px;
+
+  --thin: 100;
+  --extralight: 200;
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "aviano-sans", sans-serif;
+  background-color: var(--baggrund);
+  color: var(--maintekst);
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+h1 {
+  font-size: var(--m);
+}
+
+body {
+  max-width: 2000px;
+  min-height: 100vh;
+  margin: auto;
+}

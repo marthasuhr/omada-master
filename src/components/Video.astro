@@ -1,0 +1,49 @@
+---
+import Animation from "../components/Animation.astro";
+---
+
+<span class="video_placeholder">
+  <video id="background_video" src="../web_vid.webm" autoplay loop></video>
+  <div class="video_text">
+    <h2>thirsty? peckish? curious? we've got you covered!</h2>
+    <Animation />
+  </div>
+</span>
+
+<style>
+  /* Video */
+  #background_video {
+    grid-area: 1/1;
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 80%;
+  }
+  .video_text {
+    grid-area: 1/1;
+  }
+  .video_placeholder {
+    display: grid;
+  }
+  h2 {
+    margin-left: 40%;
+    padding-top: 200px;
+    margin-right: 10%;
+    font-size: var(--xs);
+    color: var(--baggrund);
+    font-weight: 400;
+  }
+
+  @media (min-width: 1050px) {
+    h2 {
+      margin-left: 55%;
+      padding-top: 400px;
+      margin-right: 10%;
+      font-size: var(--s);
+    }
+    #background_video {
+      height: 700px;
+    }
+  }
+</style>
